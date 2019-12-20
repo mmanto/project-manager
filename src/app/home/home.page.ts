@@ -1,5 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { IonInfiniteScroll } from '@ionic/angular';
+import { Proyecto } from '../proyecto';
+import { ProyectoService } from '../proyecto.service';
 
 @Component({
   selector: 'app-home',
@@ -11,8 +13,25 @@ export class HomePage {
 
   @ViewChild(IonInfiniteScroll, {static : false}) infiniteScroll: IonInfiniteScroll;
 
-  constructor() {
+  proyectos: Proyecto[];
 
+  constructor(private proyectoService: ProyectoService) {
+
+
+  }
+
+
+  ngOnInit() {
+
+    this.getProyectos();
+
+  }
+
+  getProyectos(): void {
+
+    this.proyectoService.getProyectos()
+
+        .subscribe(proyectos => this.proyectos = proyectos);
 
   }
 

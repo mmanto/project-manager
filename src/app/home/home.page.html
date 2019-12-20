@@ -2,7 +2,7 @@
 <ion-grid fixed>
   <ion-row>
     <ion-col>
-      <ion-card>
+      <ion-card *ngFor="let proyecto of proyectos">
         <ion-card-header>
           <ion-card-subtitle>Capacitación</ion-card-subtitle>
           <ion-card-title>Introducción python</ion-card-title>
@@ -21,7 +21,7 @@
       </ion-card>
     </ion-col>
 
-    <ion-col>
+    <!-- <ion-col>
       <ion-card>
         <ion-card-header>
           <ion-card-subtitle>Capacitación</ion-card-subtitle>
@@ -31,7 +31,7 @@
           Este curso brinda a los estudiantes los fundamentos del lenguaje python en su versión mas actualizada, así como los conceptos de entorno de trabajo visual y de consola. Los estudiantes aprenderán las características particulares del lenguaje para poder aplicarlos a conceptos generales de programación tanto como los motivos de la popularidad del lenguaje.
         </ion-card-content>
       </ion-card>
-    </ion-col>
+    </ion-col> -->
   </ion-row>
 </ion-grid>
 </ion-content>

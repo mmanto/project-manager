@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<h3>Top Proyectos</h3>
+<div class="grid grid-pad">
+  <a *ngFor="let proyecto of proyectos" class="col-1-4"
+      routerLink="/proyecto/{{proyecto.id}}">
+    <div class="module proyecto">
+      <h4>{{proyecto.nombre}}</h4>
+    </div>
+  </a>
+</div>
